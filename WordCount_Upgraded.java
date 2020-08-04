@@ -26,7 +26,7 @@ public class WordCount {
       String rawStr = value.toString();
       String replaceNumbers = rawStr.replaceAll(("[0-9]"), "#");
       String replaceCapitalChars = replaceNumbers.replaceAll(("[A-Z]"), "?");
-      String wordCleaned = replaceCapitalChars.replaceAll(("[^A-Za-z\\- ]"), "");
+      String wordCleaned = replaceCapitalChars.replaceAll(("[^A-Za-z\\-\\?\\# ]"), "");
 
       StringTokenizer itr = new StringTokenizer(wordCleaned);
       String currentToken;
